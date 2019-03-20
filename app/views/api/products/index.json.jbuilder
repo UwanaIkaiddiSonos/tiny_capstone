@@ -5,6 +5,8 @@ json.array! @products do |product|
   json.image_url product.image_url
   json.description product.description
   # json.discounted product.is_discounted
+  # json.tax product.tax
+  # json.total product.total
 end
 
 # json.array! @products do |product|
