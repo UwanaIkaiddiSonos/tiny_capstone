@@ -28,7 +28,8 @@ class Api::ProductsController < ApplicationController
       name: params[:name] || @product.name ,
       price: params[:price] || @product.price,
       image_url: params[:image_url] || @product.image_url,
-      description: params[:description] || @product.description
+      description: params[:description] || @product.description,
+      supplier_id: params[:supplier_id] || @product.supplier_id
     )
     # @product.name = params[:name] || @product.name
     # @product.price = params[:price] || @product.price
