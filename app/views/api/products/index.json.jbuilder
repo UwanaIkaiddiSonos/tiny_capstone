@@ -1,6 +1,6 @@
 #json.message "Hi, this is GET"
 
-json.array! @products.each do |product|
+json.array! @products do |product|
   json.id product.id
   json.name product.name
   json.price product.price
