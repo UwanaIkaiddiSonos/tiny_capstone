@@ -1,12 +1,21 @@
 class Api::CartedProductsController < ApplicationController
   
+  def index
+    if current_user
+      @carted_products = current_user.carted_products
+      render 'index.json.jbuilder'
+    else
+      render json: []
+    end
+  end
+
   def create
     @carted_product = CartedProduct.new(
-      user_id: 2,
-      product_id: 3,
-      order_id: nil,
-      quantity: 3,
-      status: "carted"
+      user_id: params[:user_id],
+      product_id: params[:product_id],
+      # order_id: params[:order_id],
+      quantity: params[:quantity],
+      # status: "carted"
     )
     @carted_product.save
     render 'show.json.jbuilder'
