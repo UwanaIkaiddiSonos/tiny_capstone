@@ -5,6 +5,10 @@ class Product < ApplicationRecord
   # validates :price, numericality: { greater_than: 0 }
   # validates :description, presence: true
   # validates :description, length: { in: 10..500}
+  has_many :orders
+  has_many :category_products
+  has_many :categories, through: :category_products
+  belongs_to :carted_product
   belongs_to :supplier
 
   
