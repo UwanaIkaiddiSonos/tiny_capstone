@@ -12,7 +12,7 @@ json.array! @products do |product|
   # json.in_stock product.in_stock
 end
 
-# json.array! @products do |product|
+# json.array! @products.each do |product|
 #   # json.partial! "product.json.jbuilder", variable-in-loop: temp_variable-defined-in-loop(orange)
 #   json.partial! "product.json.jbuilder", product: product
 # end
