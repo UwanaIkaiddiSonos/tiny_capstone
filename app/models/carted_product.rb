@@ -1,8 +1,7 @@
 class CartedProduct < ApplicationRecord
   belongs_to :order, optional: true
-  has_many :products
-  has_many :users
-  belongs_to :order
+  belongs_to :product
+  belongs_to :user
 
   def status
     if id

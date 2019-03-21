@@ -1,12 +1,15 @@
 class Api::CartedProductsController < ApplicationController
   
   def index
-    if current_user
-      @carted_products = current_user.carted_product
-      render 'index.json.jbuilder'
-    else
-      render json: []
-    end
+    @carted_products = current_user.carted_products
+    @carted_products = @carted_products.where(status: 'created')
+    render 'index.json.jbuilder'
+    # if current_user
+    #   @carted_products = current_user.carted_product
+    #   render 'index.json.jbuilder'
+    # else
+    #   render json: []
+    # end
   end
 
   def create
