@@ -4,7 +4,7 @@ json.price @product.price
 json.image_url @product.image_url
 json.description @product.description
 json.supplier_id @product.supplier_id
-json.user_id @product.user_
+json.user_id @product.user_id
 # json.discounted product.is_discounted
 # json.tax product.tax
 # json.total product.total
